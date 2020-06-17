@@ -1,0 +1,5 @@
+for activating the virtual env the command is:
+env/bin/activate
+
+to create a new virtual env the command is:
+python -m venv env_namep
