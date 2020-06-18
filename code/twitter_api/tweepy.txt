@@ -1,0 +1,19 @@
+Cursor object is used for "pagintation", for scrolling between pages. Effectively iterates through pages rather than looping.
+Makes it quicker to do the below:
+page = 1
+while True:
+    statuses = api.user_timeline(page=page)
+    if statuses:
+        for status in statuses:
+            # process status here
+            process_status(status)
+    else:
+        # All done
+        break
+    page += 1  # next page
+
+vs.
+
+for status in tweepy.Cursor(api.user_timeline).items(): #items says how many actual objects (soo 200 is a list of 200 tweets or something else)
+    # process status here
+    process_status(status)
