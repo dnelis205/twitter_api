@@ -1,0 +1,4 @@
+Multiple approaches to take. Suggest to trial a number of different methodologies and format a small test size in a csv sheets.
+
+1. VADER (http://t-redactyl.io/blog/2017/04/using-vader-to-handle-sentiment-analysis-with-social-media-text.html)
+2. TextBlob (https://www.geeksforgeeks.org/twitter-sentiment-analysis-using-python/). Code works, do a test with a few thousand tweets

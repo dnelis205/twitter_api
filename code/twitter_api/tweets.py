@@ -17,14 +17,18 @@ for status in tweepy.Cursor(api.user_timeline, id="TeslaPodcast").items(100):
     process_status(status)
     '''
 
-print('#TSLA')
-for tweet in tweepy.Cursor(api.search,q="#TSLA",
-                           lang="en",
-                           since="2017-04-03").items(5):
-    print (tweet.created_at, tweet.text)
+query = "#TSLA"
+language = "en"
+start_date = "2017-04-03"
+max_tweets = 20
 
-print('#TSLAQ')
-for tweet in tweepy.Cursor(api.search,q="#TSLAQ",
-                           lang="en",
-                           since="2017-04-03").items(5):
-    print (tweet.created_at, tweet.text)
+print('#TSLA')
+tweet_list = []
+for tweet in tweepy.Cursor(api.search,q=query,
+                           lang=language,
+                           since=start_date).items(max_tweets):
+    tweet_text = tweet.text
+    tweet_list.append(tweet_text)
+    #print (tweet.created_at, tweet.user.screen_name, tweet.text, tweet.user.location)
+
+#tweet.created_at, tweet.user.screen_name, tweet.text, tweet.user.location
