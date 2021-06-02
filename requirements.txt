@@ -28,7 +28,7 @@ textblob==0.15.3
 thinc==7.4.1
 tqdm==4.46.1
 tweety==0.1.6
-urllib3==1.25.9
+urllib3==1.26.5
 vaderSentiment==3.3.2
 wasabi==0.6.0
 zipp==3.1.0
